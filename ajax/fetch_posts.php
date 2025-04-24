@@ -58,7 +58,7 @@ if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $post_id = (int)$row['post_id'];
         $mediaFiles = !empty($row['media_files'])
-            ? array_map(fn($file) => "http://192.168.4.220/Harmoni/uploads/posts/" . $file, explode(',', $row['media_files']))
+            ? array_map(fn($file) => "http://localhost/this/uploads/posts/" . $file, explode(',', $row['media_files']))
             : [];
         $totalMedia = !empty($mediaFiles) ? count($mediaFiles) : 0;
 ?>
@@ -86,7 +86,7 @@ if (mysqli_num_rows($result) > 0) {
                             <?php }
                         } else { ?>
                             <div class="carousel-item active">
-                                <img src="http://192.168.4.220/Harmoni/img/default-post-1.jpeg" alt="No Image Available">
+                                <img src="http://localhost/this/img/default-post-1.jpeg" alt="No Image Available">
                                 <div class="media-count"><span>1/1</span></div>
                             </div>
                         <?php } ?>

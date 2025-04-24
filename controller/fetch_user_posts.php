@@ -28,8 +28,8 @@ if (isset($_POST['user_id'])) {
             $mediaFiles = $row['media_files'] ?? ''; 
             $mediaArray = explode(',', $mediaFiles);
             $postImage = !empty($mediaArray[0]) 
-                ? "http://192.168.4.220/Harmoni/uploads/posts/" . htmlspecialchars($mediaArray[0]) 
-                : "http://192.168.4.220/Harmoni/img/default-post-1.jpeg"; 
+                ? "http://localhost/this/uploads/posts/" . htmlspecialchars($mediaArray[0]) 
+                : "http://localhost/this/img/default-post-1.jpeg"; 
 
             if ($count % 3 == 0 && $count != 0) {
                 echo '</div><div class="row">';

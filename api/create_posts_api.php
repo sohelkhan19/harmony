@@ -50,11 +50,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     ];
                 } else {
                     $post_id = mysqli_insert_id($conn); 
-                    $post_url = "http://192.168.4.220/Harmoni/showpost.php?id=" . $post_id; 
+                    $post_url = "http://localhost/this/showpost.php?id=" . $post_id; 
 
                     // Check if media files were uploaded
                     if (!empty($_FILES['media']['name'][0])) {
-                        $uploadDirectory = "/var/www/html/Harmoni/uploads/posts/";
+                        $uploadDirectory = "C:/xampp/htdocs/this/uploads/posts/";
 
                         $allowedTypes = ["image/jpeg", "image/png", "image/gif", "video/mp4", "video/mov", "video/avi"];
                         $maxFileSize = 10 * 1024 * 1024; // 10MB max file size

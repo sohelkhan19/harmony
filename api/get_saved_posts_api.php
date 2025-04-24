@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $user_id = (int) $user_id;
 
-        $media_base_url = "http://192.168.4.220/Harmoni/uploads/posts/";
+        $media_base_url = "http://localhost/this/uploads/posts/";
 
         // Fetch saved posts with media and post author's username
         $query = "SELECT p.post_id, p.post_content, MAX(spm.created_at) AS saved_at, 

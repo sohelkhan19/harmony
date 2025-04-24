@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     // Format media files
                     $mediaFiles = !empty($row['media_files'])
-                        ? array_map(fn($file) => "http://192.168.4.220/Harmoni/uploads/posts/" . trim($file), explode(',', $row['media_files']))
+                        ? array_map(fn($file) => "http://localhost/this/uploads/posts/" . trim($file), explode(',', $row['media_files']))
                         : [];
 
                     // Fetch Comments for the Post

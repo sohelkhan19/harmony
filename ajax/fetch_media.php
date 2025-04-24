@@ -14,7 +14,7 @@ if (isset($_POST['post_id'])) {
     if (mysqli_num_rows($result) > 0) {
         echo '<div class="media-grid">';
         while ($row = mysqli_fetch_assoc($result)) {
-            $mediaPath = "http://192.168.4.220/Harmoni/uploads/posts/" . htmlspecialchars($row['media']);
+            $mediaPath = "http://localhost/this/uploads/posts/" . htmlspecialchars($row['media']);
             $fileExt = strtolower(pathinfo($row['media'], PATHINFO_EXTENSION));
 
             echo '<div class="media-item">';

@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     // Media file formatting
                     $mediaFiles = !empty($row['media_files'])
-                        ? array_map(fn($file) => "http://192.168.4.220/Harmoni/uploads/posts/" . $file, explode(',', $row['media_files']))
+                        ? array_map(fn($file) => "http://localhost/this/uploads/posts/" . $file, explode(',', $row['media_files']))
                         : [];
 
                     // Fetch comments with commenter name
