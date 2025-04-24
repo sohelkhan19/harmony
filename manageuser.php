@@ -60,8 +60,8 @@ $result = $dao->select($columns, $table);
                                 <?php while ($row = mysqli_fetch_assoc($result)) {
 
                                     $profileImage = !empty($row['user_profile_photo']) ?
-                                        "http://192.168.4.220/Harmoni" . $row['user_profile_photo'] :
-                                        "http://192.168.4.220/Harmoni/uploads/default_profile.png";
+                                        "http://localhost/this" . $row['user_profile_photo'] :
+                                        "http://localhost/this/uploads/default-profile.png";
                                 ?>
 
                                     <tr>

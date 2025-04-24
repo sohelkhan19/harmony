@@ -56,8 +56,8 @@ $output = '<div class="row">';
 
 while ($row = mysqli_fetch_assoc($result)) {
     $profileImage = !empty($row['user_profile_photo']) ? 
-        "http://192.168.4.220/Harmoni" . $row['user_profile_photo'] : 
-        "http://192.168.4.220/Harmoni/uploads/profile3.webp";
+        "http://localhost/this" . $row['user_profile_photo'] : 
+        "http://localhost/this/uploads/default_profile.png";
 
     $output .= '<div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                     <div class="profile-card">

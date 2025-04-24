@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user_id = intval($_POST['user_id']);
 
         // Base URL for profile pictures
-        $base_url = "http://192.168.4.220/Harmoni";
+        $base_url = "http://localhost/this";
 
         // Fetch Followers List 
         $fetchFollowers = "SELECT f.follower_id, u.user_name, u.user_profile_photo 

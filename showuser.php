@@ -108,8 +108,8 @@ $deactiveCount = mysqli_fetch_assoc($deactiveCountQuery)['deactive_count'];
                             <?php while ($row = mysqli_fetch_assoc($result)) {
                                 // Set profile image URL
                                 $profileImage = !empty($row['user_profile_photo']) ?
-                                    "http://192.168.4.220/Harmoni" . $row['user_profile_photo'] :
-                                    "http://192.168.4.220/Harmoni/uploads/profile3.webp";
+                                    "http://localhost/this" . $row['user_profile_photo'] :
+                                    "http://localhost/this/uploads/default-profile.png";
                             ?>
                                 <div class="col-lg-4 col-md-6 mb-4">
                                     <div class="profile-card">

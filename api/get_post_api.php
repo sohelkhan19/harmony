@@ -71,8 +71,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         "user_id" => (int)$row['user_id'],
                         "username" => htmlspecialchars($row['user_name']),
                         "user_profile_photo" => !empty($row['user_profile_photo'])
-                            ? "http://192.168.4.220/Harmoni" . $row['user_profile_photo']
-                            : "http://192.168.4.220/Harmoni/uploads/profile3.webp",
+                            ? "http://localhost/this" . $row['user_profile_photo']
+                            : "http://localhost/this/uploads/default-profile.png",
                         "post_content" => htmlspecialchars($row['post_content']),
                         "created_at" => $row['created_at'],
                         "media_files" => $mediaFiles,

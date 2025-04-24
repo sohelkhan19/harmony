@@ -27,8 +27,8 @@ if (mysqli_num_rows($result) > 0) {
     echo '<ul class="list-group">';
     while ($row = mysqli_fetch_assoc($result)) {
         $profileImage = !empty($row['user_profile_photo']) ?
-            "http://192.168.4.220/Harmoni" . htmlspecialchars($row['user_profile_photo']) :
-            "http://192.168.4.220/Harmoni/uploads/default_profile.png";
+            "http://localhost/this" . htmlspecialchars($row['user_profile_photo']) :
+            "http://localhost/this/uploads/default-profile.png";
 
         echo '<li class="list-group-item d-flex justify-content-between align-items-start">
                 <div class="d-flex align-items-center">

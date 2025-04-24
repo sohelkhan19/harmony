@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-            $profileImage = !empty($row['user_profile_photo']) ? "http://192.168.4.220/Harmoni" . $row['user_profile_photo'] : "http://192.168.4.220/Harmoni/uploads/default_profile.png";
+            $profileImage = !empty($row['user_profile_photo']) ? "http://localhost/this" . $row['user_profile_photo'] : "http://localhost/this/uploads/default-profile.png";
 
             echo '<li class="list-group-item">
                     <img src="'.htmlspecialchars($profileImage).'" alt="Profile Pic" width="40" height="40" class="rounded-circle">
